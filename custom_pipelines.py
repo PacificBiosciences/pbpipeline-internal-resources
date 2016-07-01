@@ -14,7 +14,7 @@ log = logging.getLogger(__name__)
 
 class Constants(object):
     # This should be rethought to be consistent with the repo name
-    PT_NAMESPACE = "pbsmrtpipe_examples"
+    PT_NAMESPACE = "pbpipelines_internal"
     TAGS_DEV = "dev"
 
 
@@ -22,15 +22,16 @@ registry = PipelineRegistry(Constants.PT_NAMESPACE)
 
 
 def _example_topts():
-    return {"pbsmrtpipe_examples.task_options.dev_message": "Preset Custom Dev Message from register pipeline",
-            "pbsmrtpipe_examples.task_options.custom_alpha": 12345}
+    return {"pbpipelines_internal.task_options.dev_message": "Preset Custom Dev Message from register pipeline",
+            "pbpipelines_internal.task_options.custom_alpha": 12345}
 
 
-@registry("dev_a", "Example 01", "0.1.0", tags=("dev", "hello-world"), task_options=_example_topts())
+@registry("dev_a", "Custom Example 01", "0.1.0", tags=("dev", "hello-world"), task_options=_example_topts())
 def to_bs():
     """Custom Pipeline Registry for dev hello world tasks"""
     b1 = [('$entry:e_01', 'pbsmrtpipe.tasks.dev_hello_world:0')]
 
+    # Dev tasks that are bundled with pbsmrtpipe
     b2 = [('pbsmrtpipe.tasks.dev_hello_world:0', 'pbsmrtpipe.tasks.dev_hello_worlder:0'),
           ('pbsmrtpipe.tasks.dev_hello_world:0', 'pbsmrtpipe.tasks.dev_hello_garfield:0')]
 
@@ -39,12 +40,11 @@ def to_bs():
     return b1 + b2 + b3
 
 
-@registry("dev_b", "Example 02", "0.1.0", tags=("dev",), task_options=_example_topts())
+@registry("dev_b", "Custom Example 02", "0.1.0", tags=("dev",), task_options=_example_topts())
 def to_bs():
     """Custom Pipeline B for testing"""
-    # Note this is using a custom Namespace and the pipeline should be referenced
-    # by this namespace.
-    b3 = [("pbsmrtpipe_examples.pipelines.dev_a:pbsmrtpipe.tasks.dev_txt_to_fasta:0", 'pbsmrtpipe.tasks.dev_filter_fasta:0')]
+
+    b3 = [("pbpipelines_internal.pipelines.dev_a:pbsmrtpipe.tasks.dev_txt_to_fasta:0", 'pbsmrtpipe.tasks.dev_filter_fasta:0')]
     return b3
 
 

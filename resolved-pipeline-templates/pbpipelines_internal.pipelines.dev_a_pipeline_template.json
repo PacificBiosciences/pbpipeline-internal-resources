@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbsmrtpipe_examples.pipelines.dev_a with pbsmrtpipe v0.41.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.dev_a with pbsmrtpipe v0.41.0", 
     "bindings": [
         {
             "in": {
@@ -53,8 +53,8 @@
             ]
         }
     ], 
-    "id": "pbsmrtpipe_examples.pipelines.dev_a", 
-    "name": "Example 01", 
+    "id": "pbpipelines_internal.pipelines.dev_a", 
+    "name": "Custom Example 01", 
     "options": [], 
     "tags": [
         "hello-world", 
