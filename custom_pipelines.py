@@ -9,16 +9,18 @@ import sys
 from pbsmrtpipe.core import PipelineRegistry
 from pbsmrtpipe.cli_custom_pipeline import registry_runner_main
 
+# This should probably be removed
+from pbsmrtpipe.pb_pipelines.pb_pipelines_sa3 import Constants, Tags
+
 log = logging.getLogger(__name__)
 
 
-class Constants(object):
+class C(object):
     # This should be rethought to be consistent with the repo name
     PT_NAMESPACE = "pbpipelines_internal"
-    TAGS_DEV = "dev"
 
 
-registry = PipelineRegistry(Constants.PT_NAMESPACE)
+registry = PipelineRegistry(C.PT_NAMESPACE)
 
 
 def _example_topts():
@@ -46,6 +48,60 @@ def to_bs():
 
     b3 = [("pbpipelines_internal.pipelines.dev_a:pbsmrtpipe.tasks.dev_txt_to_fasta:0", 'pbsmrtpipe.tasks.dev_filter_fasta:0')]
     return b3
+
+
+@registry("internal_cond_dev", "Dev Reseq Cond Report", "0.1.0", tags=(Tags.DEV, ))
+def to_bs():
+    """Hello World test for Conditions JSON"""
+    b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
+
+    return b1
+
+
+@registry("internal_cond_dev2", "Dev Align Report", "0.1.0", tags=(Tags.DEV, ))
+def to_bs():
+    """Dev Test for AlignmentSet Condition Summary"""
+    b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
+
+    b2 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_alignmentsets_report:0")]
+
+    return b1 + b2
+
+
+@registry("internal_cond_dev_r", "Dev R (hello world)", "0.1.0", tags=(Tags.DEV, ))
+def to_bs():
+    """Hello World for R + Reports"""
+    # Call the Python cond report for dev/testing purposes
+    b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
+
+    # RRRRRRRR. This tasks should be renamed
+    b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.hello_reseq_condition:0")]
+
+    return b1 + b2
+
+
+@registry("internal_cond_dev_r_reports", "Dev R (hello+Report)", "0.1.0", tags=(Tags.DEV, ))
+def to_bs():
+    """Hello World for R"""
+    # Call the Python cond report for dev/testing purposes
+    b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
+
+    # RRRRRRRR. This stupid typo should be fixed
+    b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.hello_reseq_condition:0")]
+
+    b3 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.hello_reseq_condition_report:0")]
+
+    return b1 + b2 + b3
+
+
+@registry("internal_cond_acc_density", "Accuracy Density Plots", "0.1.0", tags=(Tags.INTERNAL, ))
+def to_bs():
+    """Internal Condition Accuracy Density Plots"""
+    b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
+
+    b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.accplot_reseq_condition:0")]
+
+    return b1 + b2
 
 
 if __name__ == '__main__':
