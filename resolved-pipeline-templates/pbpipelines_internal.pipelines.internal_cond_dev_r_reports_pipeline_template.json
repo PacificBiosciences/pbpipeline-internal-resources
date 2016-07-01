@@ -1,0 +1,37 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_dev_r_reports with pbsmrtpipe v0.41.0", 
+    "bindings": [], 
+    "description": "Hello World for R", 
+    "entryPoints": [
+        {
+            "entryId": "cond_json", 
+            "fileTypeId": "PacBio.FileTypes.COND_RESEQ", 
+            "name": "Entry Name: PacBio.FileTypes.COND_RESEQ", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.cond_to_report"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.hello_reseq_condition_report"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.hello_reseq_condition"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.internal_cond_dev_r_reports", 
+    "name": "Dev R (hello+Report)", 
+    "options": [], 
+    "tags": [
+        "dev"
+    ], 
+    "taskOptions": [], 
+    "version": "0.1.0"
+}

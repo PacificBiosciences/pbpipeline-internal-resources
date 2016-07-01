@@ -1,0 +1,32 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_acc_density with pbsmrtpipe v0.41.0", 
+    "bindings": [], 
+    "description": "Internal Condition Accuracy Density Plots", 
+    "entryPoints": [
+        {
+            "entryId": "cond_json", 
+            "fileTypeId": "PacBio.FileTypes.COND_RESEQ", 
+            "name": "Entry Name: PacBio.FileTypes.COND_RESEQ", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.cond_to_report"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.accplot_reseq_condition"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.internal_cond_acc_density", 
+    "name": "Accuracy Density Plots", 
+    "options": [], 
+    "tags": [
+        "internal"
+    ], 
+    "taskOptions": [], 
+    "version": "0.1.0"
+}
