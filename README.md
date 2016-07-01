@@ -45,3 +45,10 @@ Integration tests for pipelines
 ```
 make run-teskit
 ```
+
+This might require tasks that depend on pbinternal2, pbcommandR, internal tools repo (private).
+
+- [pbinternal2](https://github.com/PacificBiosciences/pbinternal2) (python)
+- [pbcommandR](https://github.com/PacificBiosciences/pbcommandR) (R)
+- (Private) [internaltools](https://github.com/PacificBiosciences/internaltools) (R) 
+
