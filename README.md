@@ -2,6 +2,12 @@
 
 Internal Pipeline resources used by smrtflow and pbsmrtpipe
 
+Required Tools to run all the pipelines:
+
+- [pbinternal2](https://github.com/PacificBiosciences/pbinternal2) (python)
+- [pbcommandR](https://github.com/PacificBiosciences/pbcommandR) (R)
+- (Private) [internaltools](https://github.com/PacificBiosciences/internaltools) (R) 
+
 
 Add custom tool contracts:
 
@@ -40,15 +46,10 @@ make test-sanity
 
 ## Run Testkit jobs 
 
-Integration tests for pipelines
+Integration tests for pipelines (Note this requires the tools from pbinternal2, pbcommandR, and internaltools repo to be installed)
 
 ```
-make run-teskit
+make run-testkit
 ```
 
-This might require tasks that depend on pbinternal2, pbcommandR, internal tools repo (private).
-
-- [pbinternal2](https://github.com/PacificBiosciences/pbinternal2) (python)
-- [pbcommandR](https://github.com/PacificBiosciences/pbcommandR) (R)
-- (Private) [internaltools](https://github.com/PacificBiosciences/internaltools) (R) 
 
