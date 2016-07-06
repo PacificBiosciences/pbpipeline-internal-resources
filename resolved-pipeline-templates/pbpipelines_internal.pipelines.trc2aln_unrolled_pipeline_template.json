@@ -1,0 +1,159 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.trc2aln_unrolled with pbsmrtpipe v0.41.0", 
+    "bindings": [
+        {
+            "in": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbreports.tasks.mapping_stats"
+            }, 
+            "out": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.pbalign_unrolled"
+            }
+        }, 
+        {
+            "in": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.pbalign_unrolled"
+            }, 
+            "out": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.bam2bam"
+            }
+        }, 
+        {
+            "in": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.bam2bam"
+            }, 
+            "out": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.baz2bam"
+            }
+        }, 
+        {
+            "in": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.baz2bam"
+            }, 
+            "out": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.basecaller"
+            }
+        }
+    ], 
+    "description": "Pipeline pbpipelines_internal.pipelines.trc2aln_unrolled description", 
+    "entryPoints": [
+        {
+            "entryId": "adapter_fa", 
+            "fileTypeId": "PacBio.FileTypes.Fasta", 
+            "name": "Entry Name: PacBio.FileTypes.Fasta", 
+            "tasks": [
+                {
+                    "index": 1, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.baz2bam"
+                }
+            ]
+        }, 
+        {
+            "entryId": "pa_trc", 
+            "fileTypeId": "PacBio.ReadFile.TraceFile", 
+            "name": "Entry Name: PacBio.ReadFile.TraceFile", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.basecaller"
+                }
+            ]
+        }, 
+        {
+            "entryId": "eid_ref_dataset", 
+            "fileTypeId": "PacBio.DataSet.ReferenceSet", 
+            "name": "Entry Name: PacBio.DataSet.ReferenceSet", 
+            "tasks": [
+                {
+                    "index": 1, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.pbalign_unrolled"
+                }
+            ]
+        }, 
+        {
+            "entryId": "metadata", 
+            "fileTypeId": "PacBio.FileTypes.xml", 
+            "name": "Entry Name: PacBio.FileTypes.xml", 
+            "tasks": [
+                {
+                    "index": 2, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.baz2bam"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.trc2aln_unrolled", 
+    "name": "Unrolled alignment from .trc", 
+    "options": [], 
+    "tags": [
+        "internal", 
+        "dev", 
+        "mapping", 
+        "reports", 
+        "primary"
+    ], 
+    "taskOptions": [
+        {
+            "default": "bam2bam", 
+            "description": "Option bam2bam_exe description", 
+            "id": "pbinternal2.task_options.bam2bam_exe", 
+            "name": "Option bam2bam_exe", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
+            "default": "basecaller-console-app", 
+            "description": "Option basecaller_exe description", 
+            "id": "pbinternal2.task_options.basecaller_exe", 
+            "name": "Option basecaller_exe", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
+            "default": "--internal --method=TA_DME_FFHmm_P2B", 
+            "description": "Option basecaller_options description", 
+            "id": "pbinternal2.task_options.basecaller_options", 
+            "name": "Option basecaller_options", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
+            "default": "baz2bam", 
+            "description": "Option baz2bam_exe description", 
+            "id": "pbinternal2.task_options.baz2bam_exe", 
+            "name": "Option baz2bam_exe", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
+            "default": "--bestn 1 --forwardOnly --fastMaxInterval --maxAnchorsPerPosition 30000 --ignoreHQRegions --minPctIdentity 60", 
+            "description": "Option blasr_options description", 
+            "id": "pbinternal2.task_options.blasr_options", 
+            "name": "Option blasr_options", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
+            "default": 50, 
+            "description": "Option min_subread_length description", 
+            "id": "pbinternal2.task_options.min_subread_length", 
+            "name": "Option min_subread_length", 
+            "optionTypeId": "pbsmrtpipe.option_types.integer"
+        }
+    ], 
+    "version": "0.1.0"
+}
