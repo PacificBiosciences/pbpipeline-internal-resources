@@ -2,6 +2,7 @@ PROJ_DIR := $(abspath $(lastword $(MAKEFILE_LIST)))
 
 emit-pipelines:
 	python custom_pipelines.py --log-level=INFO resolved-pipeline-templates
+	python custom_pa_pipelines.py --log-level=INFO resolved-pipeline-templates
 
 test-dev:
 	source setup-env.sh && cd testkit-data && pbtestkit-multirunner --debug --nworkers 8 testkit.fofn
