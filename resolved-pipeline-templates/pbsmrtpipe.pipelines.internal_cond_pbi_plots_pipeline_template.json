@@ -1,7 +1,7 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_acc_density with pbsmrtpipe v0.41.0", 
+    "_comment": "Created pipeline pbsmrtpipe.pipelines.internal_cond_pbi_plots with pbsmrtpipe v0.41.0", 
     "bindings": [], 
-    "description": "Internal Condition Accuracy Density Plots", 
+    "description": "PBI Based Metrics Plots", 
     "entryPoints": [
         {
             "entryId": "cond_json", 
@@ -16,17 +16,18 @@
                 {
                     "index": 0, 
                     "instanceId": 0, 
-                    "taskTypeId": "pbcommandR.tasks.accplot_reseq_condition"
+                    "taskTypeId": "pbcommandR.tasks.pbiplot_reseq_condition"
                 }
             ]
         }
     ], 
-    "id": "pbpipelines_internal.pipelines.internal_cond_acc_density", 
-    "name": "Accuracy Density Plots", 
+    "id": "pbsmrtpipe.pipelines.internal_cond_pbi_plots", 
+    "name": "Internal Condition PBI Based Plots using R", 
     "options": [], 
     "tags": [
-        "internal"
+        "internal", 
+        "conditions"
     ], 
     "taskOptions": [], 
-    "version": "0.1.0"
+    "version": "0.2.0"
 }
