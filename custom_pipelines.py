@@ -94,12 +94,12 @@ def to_bs():
     return b1 + b2 + b3
 
 
-@registry("internal_cond_acc_density", "Accuracy Density Plots", "0.1.0", tags=(Tags.INTERNAL, ))
+@registry("internal_cond_pbi_plots", "Internal Condition PBI Based Plots", "0.1.0", tags=(Tags.INTERNAL, ))
 def to_bs():
-    """Internal Condition Accuracy Density Plots"""
+    """PBI Based Metrics Plots"""
     b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
 
-    b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.accplot_reseq_condition:0")]
+    b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.pbiplot_reseq_condition:0")]
 
     return b1 + b2
 
