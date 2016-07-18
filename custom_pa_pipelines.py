@@ -186,5 +186,27 @@ def trc_to_unrolled_alignment():
     return b1 + b2 + b3 + b4
 
 
+@pa_register("subreadset_refarm", "Resolve Trace file from Subreadset, then Refarm to generate a new SubreadSet", "0.1.0",
+             tags=(Tags.DEV, Tags.INTERNAL, "primary-analysis"),
+             task_options={})
+def subreadset_refarm():
+    # WIP. going to get a test to work and iterate. This might require a custom task to generate the
+    # refarmed subreadset from the baz file
+    # returns a baz file
+    b1 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.basecaller_from_subreadset:0")]
+    # b2 = _core_baz2bam("pbinternal2.tasks.basecaller_from_subreadset:0")
+    # this still needs to call baz2bam and generate a SubreadSet
+    return b1
+
+
+@pa_register("subreadset_compare", "Compare Two SubreadSets, the first is assumed to be the 'baseline' ", "0.1.0",
+             tags=(Tags.DEV, Tags.INTERNAL, "primary-analysis"),
+             task_options={})
+def subreadset_compare():
+    b1 = [("$entry:sset1", "pbinternal2.tasks.compare_subreadsets_report:0")]
+    b2 = [("$entry:sset2", "pbinternal2.tasks.compare_subreadsets_report:1")]
+    return b1 + b2
+
+
 if __name__ == '__main__':
     sys.exit(registry_runner_main(registry)(argv=sys.argv))
