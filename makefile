@@ -1,8 +1,21 @@
 PROJ_DIR := $(abspath $(lastword $(MAKEFILE_LIST)))
 
-emit-pipelines:
-	python custom_pipelines.py --log-level=INFO resolved-pipeline-templates
+
+emit-pa-pipelines:
 	python custom_pa_pipelines.py --log-level=INFO resolved-pipeline-templates
+
+emit-internal-pipelines:
+	python custom_pipelines.py --log-level=INFO resolved-pipeline-templates
+
+emit-pipelines: emit-pa-pipelines emit-internal-pipelines
+
+show-pipelines:
+	pbsmrtpipe show-templates | grep internal
+
+
+emit-tool-contracts:
+	python -m pbinternal2.analysis_tools emit-tool-contracts -o tool-contracts
+	python -m pbinternal2.pa_tasks emit-tool-contracts -o tool-contracts
 
 test-dev:
 	cd testkit-data && pbtestkit-multirunner --debug --nworkers 8 testkit.fofn
@@ -10,7 +23,7 @@ test-dev:
 run-testkit: test-dev
 
 test-pipelines:
-	nosetests --verbose pbsmrtpipe.tests.test_pb_pipelines_sanity
+	python -c "import pbsmrtpipe.loader as L; L.load_all()"
 
 test-loader:
 	python -c "import pbsmrtpipe.loader as L; L.load_all()"
