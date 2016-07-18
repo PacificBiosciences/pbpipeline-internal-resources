@@ -1,0 +1,14 @@
+{
+  "pipelineId": "pbsmrtpipe.pipelines.internal_cond_dev",
+  "conditions": [{
+    "condId": "cond_a",
+    "subreadset": "/mnt/appslab/lims/smrt_data/r54026_20160713_164001/1_A01/m54026_160713_164348.subreadset.xml",
+    "alignmentset": "/pbi/dept/secondary/siv/smrtlink/smrtlink-beta/smrtsuite_166987/userdata/jobs_root/015/015290/tasks/pbalign.tasks.consolidate_alignments-0/combined.alignmentset.xml",
+    "referenceset": "/pbi/dept/secondary/siv/smrtlink/smrtlink-beta/smrtsuite_166987/userdata/jobs_root/000/000139/pacbio-reference/ecoliK12_pbi_March2013/referenceset.xml"
+  }, {
+    "condId": "cond_b",
+    "subreadset": "/pbi/collections/313/3130024/r54012_20160711_225859/5_E01/m54012_160712_174844.subreadset.xml",
+    "alignmentset": "/pbi/dept/secondary/siv/smrtlink/smrtlink-beta/smrtsuite_166987/userdata/jobs_root/015/015240/tasks/pbalign.tasks.consolidate_alignments-0/combined.alignmentset.xml",
+    "referenceset": "/pbi/dept/secondary/siv/smrtlink/smrtlink-beta/smrtsuite_166987/userdata/jobs_root/005/005831/pacbio-reference/pCYPAC_corrected_NdeI_insertOnly/referenceset.xml"
+  }]
+}
