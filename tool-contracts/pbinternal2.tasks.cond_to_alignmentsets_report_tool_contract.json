@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.4.2",
+        "_comment": "Created by v0.4.1",
         "description": "Quick tool cond_to_alignmentsets_report pbinternal2.tasks.cond_to_alignmentsets_report",
         "input_types": [
             {
@@ -15,7 +15,7 @@
                 "title": "<FileType id=PacBio.FileTypes.COND_RESEQ name=file >"
             }
         ],
-        "is_distributed": false,
+        "is_distributed": true,
         "name": "Tool cond_to_alignmentsets_report",
         "nproc": 1,
         "output_types": [

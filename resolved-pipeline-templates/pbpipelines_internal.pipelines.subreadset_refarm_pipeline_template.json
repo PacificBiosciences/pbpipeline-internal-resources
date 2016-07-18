@@ -1,0 +1,45 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.subreadset_refarm with pbsmrtpipe v0.41.0", 
+    "bindings": [], 
+    "description": "Pipeline pbpipelines_internal.pipelines.subreadset_refarm description", 
+    "entryPoints": [
+        {
+            "entryId": "eid_subread", 
+            "fileTypeId": "PacBio.DataSet.SubreadSet", 
+            "name": "Entry Name: PacBio.DataSet.SubreadSet", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.basecaller_from_subreadset"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.subreadset_refarm", 
+    "name": "Resolve Trace file from Subreadset, then Refarm to generate a new SubreadSet", 
+    "options": [], 
+    "tags": [
+        "internal", 
+        "primary-analysis", 
+        "dev", 
+        "primary"
+    ], 
+    "taskOptions": [
+        {
+            "default": "basecaller-console-app", 
+            "description": "Option basecaller_exe description", 
+            "id": "pbinternal2.task_options.basecaller_exe", 
+            "name": "Option basecaller_exe", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
+            "default": "--internal --method=TA_DME_FFHmm_P2B", 
+            "description": "Option basecaller_options description", 
+            "id": "pbinternal2.task_options.basecaller_options", 
+            "name": "Option basecaller_options", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }
+    ], 
+    "version": "0.1.0"
+}

@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.4.3",
+        "_comment": "Created by v0.4.1",
         "description": "Quick tool pbalign_unrolled pbinternal2.tasks.pbalign_unrolled",
         "input_types": [
             {

@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.4.3",
+        "_comment": "Created by v0.4.1",
         "description": "Quick tool baz2bam pbinternal2.tasks.baz2bam",
         "input_types": [
             {

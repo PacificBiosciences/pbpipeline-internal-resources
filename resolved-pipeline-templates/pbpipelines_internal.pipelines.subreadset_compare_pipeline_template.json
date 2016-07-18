@@ -1,0 +1,42 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.subreadset_compare with pbsmrtpipe v0.41.0", 
+    "bindings": [], 
+    "description": "Pipeline pbpipelines_internal.pipelines.subreadset_compare description", 
+    "entryPoints": [
+        {
+            "entryId": "sset2", 
+            "fileTypeId": "PacBio.DataSet.SubreadSet", 
+            "name": "Entry Name: PacBio.DataSet.SubreadSet", 
+            "tasks": [
+                {
+                    "index": 1, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.compare_subreadsets_report"
+                }
+            ]
+        }, 
+        {
+            "entryId": "sset1", 
+            "fileTypeId": "PacBio.DataSet.SubreadSet", 
+            "name": "Entry Name: PacBio.DataSet.SubreadSet", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.compare_subreadsets_report"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.subreadset_compare", 
+    "name": "Compare Two SubreadSets, the first is assumed to be the 'baseline' ", 
+    "options": [], 
+    "tags": [
+        "internal", 
+        "primary-analysis", 
+        "dev", 
+        "primary"
+    ], 
+    "taskOptions": [], 
+    "version": "0.1.0"
+}

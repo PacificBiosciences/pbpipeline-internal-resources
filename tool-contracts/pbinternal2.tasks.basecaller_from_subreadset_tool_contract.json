@@ -6,18 +6,18 @@
     },
     "tool_contract": {
         "_comment": "Created by v0.4.1",
-        "description": "Quick tool basecaller pbinternal2.tasks.basecaller",
+        "description": "Quick tool basecaller_from_subreadset pbinternal2.tasks.basecaller_from_subreadset",
         "input_types": [
             {
-                "description": "description for PacBio.ReadFile.TraceFile_0",
-                "file_type_id": "PacBio.ReadFile.TraceFile",
-                "id": "Label PacBio.ReadFile.TraceFile_0",
-                "title": "<FileType id=PacBio.ReadFile.TraceFile name=file >"
+                "description": "description for PacBio.DataSet.SubreadSet_0",
+                "file_type_id": "PacBio.DataSet.SubreadSet",
+                "id": "Label PacBio.DataSet.SubreadSet_0",
+                "title": "<DataSetFileType id=PacBio.DataSet.SubreadSet name=file >"
             }
         ],
         "is_distributed": true,
-        "name": "Tool basecaller",
-        "nproc": "$max_nproc",
+        "name": "Tool basecaller_from_subreadset",
+        "nproc": 1,
         "output_types": [
             {
                 "default_name": "file",
@@ -77,8 +77,8 @@
             }
         ],
         "task_type": "pbsmrtpipe.task_types.standard",
-        "tool_contract_id": "pbinternal2.tasks.basecaller"
+        "tool_contract_id": "pbinternal2.tasks.basecaller_from_subreadset"
     },
-    "tool_contract_id": "pbinternal2.tasks.basecaller",
+    "tool_contract_id": "pbinternal2.tasks.basecaller_from_subreadset",
     "version": "0.1.0"
 }
