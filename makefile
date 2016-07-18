@@ -5,7 +5,7 @@ emit-pipelines:
 	python custom_pa_pipelines.py --log-level=INFO resolved-pipeline-templates
 
 test-dev:
-	source setup-env.sh && cd testkit-data && pbtestkit-multirunner --debug --nworkers 8 testkit.fofn
+	cd testkit-data && pbtestkit-multirunner --debug --nworkers 8 testkit.fofn
 
 run-testkit: test-dev
 
