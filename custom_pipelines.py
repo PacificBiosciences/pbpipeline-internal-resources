@@ -103,6 +103,16 @@ def to_bs():
 
     return b1 + b2
 
+@registry("internal_cond_read_plots", "Internal Condition Read Based Plots", "0.1.0", tags=(Tags.INTERNAL, ))
+def to_bs():
+    """Read Based Metrics Plots"""
+    b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
+
+    b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.readplot_reseq_condition:0")]
+
+    return b1 + b2
+
+
 
 if __name__ == '__main__':
     sys.exit(registry_runner_main(registry)(argv=sys.argv))
