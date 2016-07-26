@@ -1,0 +1,38 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_r_plots with pbsmrtpipe v0.41.0", 
+    "bindings": [], 
+    "description": "A pipeline that runs all the R metric makers", 
+    "entryPoints": [
+        {
+            "entryId": "cond_json", 
+            "fileTypeId": "PacBio.FileTypes.COND_RESEQ", 
+            "name": "Entry Name: PacBio.FileTypes.COND_RESEQ", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.cond_to_report"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.pbiplot_reseq_condition"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.readplot_reseq_condition"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.internal_cond_r_plots", 
+    "name": "Resequencing Comparison Plots", 
+    "options": [], 
+    "tags": [
+        "internal", 
+        "conditions"
+    ], 
+    "taskOptions": [], 
+    "version": "0.2.0"
+}
