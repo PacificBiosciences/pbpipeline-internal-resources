@@ -241,8 +241,7 @@
         "consensus", 
         "internal", 
         "mapping", 
-        "dev", 
-        "primary"
+        "primary-analysis"
     ], 
     "taskOptions": [
         {

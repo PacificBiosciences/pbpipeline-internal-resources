@@ -21,9 +21,7 @@
     "options": [], 
     "tags": [
         "internal", 
-        "primary-analysis", 
-        "dev", 
-        "primary"
+        "primary-analysis"
     ], 
     "taskOptions": [
         {

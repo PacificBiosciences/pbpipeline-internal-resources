@@ -46,8 +46,7 @@
     "tags": [
         "internal", 
         "converters", 
-        "dev", 
-        "primary"
+        "primary-analysis"
     ], 
     "taskOptions": [
         {

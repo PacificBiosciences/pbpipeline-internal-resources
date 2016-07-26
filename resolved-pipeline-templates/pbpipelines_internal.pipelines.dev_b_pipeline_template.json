@@ -69,7 +69,8 @@
     "name": "Custom Example 02", 
     "options": [], 
     "tags": [
-        "dev"
+        "internal", 
+        "conditions"
     ], 
     "taskOptions": [
         {
@@ -87,5 +88,5 @@
             "optionTypeId": "pbsmrtpipe.option_types.string"
         }
     ], 
-    "version": "0.1.0"
+    "version": "0.2.0"
 }
