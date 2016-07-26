@@ -19,6 +19,10 @@ class C(object):
     # This should be rethought to be consistent with the repo name
     PT_NAMESPACE = "pbpipelines_internal"
 
+    TAGS_COND = "conditions"
+
+    TAGS_DEFAULT = (Tags.INTERNAL, TAGS_COND)
+
 
 registry = PipelineRegistry(C.PT_NAMESPACE)
 
@@ -28,7 +32,7 @@ def _example_topts():
             "pbpipelines_internal.task_options.custom_alpha": 12345}
 
 
-@registry("dev_a", "Custom Example 01", "0.1.0", tags=("dev", "hello-world"), task_options=_example_topts())
+@registry("dev_a", "Custom Example 01", "0.2.0", tags=C.TAGS_DEFAULT, task_options=_example_topts())
 def to_bs():
     """Custom Pipeline Registry for dev hello world tasks"""
     b1 = [('$entry:e_01', 'pbsmrtpipe.tasks.dev_hello_world:0')]
@@ -42,7 +46,7 @@ def to_bs():
     return b1 + b2 + b3
 
 
-@registry("dev_b", "Custom Example 02", "0.1.0", tags=("dev",), task_options=_example_topts())
+@registry("dev_b", "Custom Example 02", "0.2.0", tags=C.TAGS_DEFAULT, task_options=_example_topts())
 def to_bs():
     """Custom Pipeline B for testing"""
 
@@ -50,7 +54,7 @@ def to_bs():
     return b3
 
 
-@registry("internal_cond_dev", "Dev Reseq Cond Report", "0.1.0", tags=(Tags.DEV, ))
+@registry("internal_cond_dev", "Dev Reseq Cond Report", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
     """Hello World test for Conditions JSON"""
     b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
@@ -58,7 +62,7 @@ def to_bs():
     return b1
 
 
-@registry("internal_cond_dev2", "Dev Align Report", "0.1.0", tags=(Tags.DEV, ))
+@registry("internal_cond_dev2", "Dev Align Report", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
     """Dev Test for AlignmentSet Condition Summary"""
     b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
@@ -68,7 +72,7 @@ def to_bs():
     return b1 + b2
 
 
-@registry("internal_cond_dev_r", "Dev R (hello world)", "0.1.0", tags=(Tags.DEV, ))
+@registry("internal_cond_dev_r", "Dev R (hello world)", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
     """Hello World for R + Reports"""
     # Call the Python cond report for dev/testing purposes
@@ -80,7 +84,7 @@ def to_bs():
     return b1 + b2
 
 
-@registry("internal_cond_dev_r_reports", "Dev R (hello+Report)", "0.1.0", tags=(Tags.DEV, ))
+@registry("internal_cond_dev_r_reports", "Dev R (hello+Report)", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
     """Hello World for R"""
     # Call the Python cond report for dev/testing purposes
@@ -94,7 +98,7 @@ def to_bs():
     return b1 + b2 + b3
 
 
-@registry("internal_cond_pbi_plots", "Internal Condition PBI Based Plots", "0.1.0", tags=(Tags.INTERNAL, ))
+@registry("internal_cond_pbi_plots", "Internal Condition PBI Based Plots", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
     """PBI Based Metrics Plots"""
     b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
@@ -103,7 +107,8 @@ def to_bs():
 
     return b1 + b2
 
-@registry("internal_cond_read_plots", "Internal Condition Read Based Plots", "0.1.0", tags=(Tags.INTERNAL, ))
+
+@registry("internal_cond_read_plots", "Internal Condition Read Based Plots", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
     """Read Based Metrics Plots"""
     b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
@@ -111,7 +116,6 @@ def to_bs():
     b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.readplot_reseq_condition:0")]
 
     return b1 + b2
-
 
 
 if __name__ == '__main__':

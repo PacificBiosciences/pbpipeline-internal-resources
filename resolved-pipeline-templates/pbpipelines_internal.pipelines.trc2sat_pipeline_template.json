@@ -286,12 +286,11 @@
     "name": "Trace to Site Acceptance Test", 
     "options": [], 
     "tags": [
-        "primary", 
-        "dev", 
         "mapping", 
+        "reports", 
         "consensus", 
         "internal", 
-        "reports", 
+        "primary-analysis", 
         "sat"
     ], 
     "taskOptions": [

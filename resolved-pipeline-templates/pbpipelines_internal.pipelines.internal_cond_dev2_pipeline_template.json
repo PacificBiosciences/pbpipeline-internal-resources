@@ -25,8 +25,9 @@
     "name": "Dev Align Report", 
     "options": [], 
     "tags": [
-        "dev"
+        "internal", 
+        "conditions"
     ], 
     "taskOptions": [], 
-    "version": "0.1.0"
+    "version": "0.2.0"
 }

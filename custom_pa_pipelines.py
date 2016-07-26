@@ -32,11 +32,13 @@ class Constants(BaseConstants):
     ENTRY_ADAPTER_FA = to_entry("adapter_fa")
     ENTRY_METADATA = to_entry("metadata")
 
+    TAGS_PA = "primary-analysis"
+
 registry = PipelineRegistry(Constants.PT_NAMESPACE)
 
 
 def pa_register(relative_id, display_name, version, tags=(), task_options=None):
-    tags = list(tags) + ["primary", Tags.DEV, Tags.INTERNAL]
+    tags = list(tags) + [Constants.TAGS_PA, Tags.INTERNAL]
     return registry(relative_id, display_name, version, tags=tags,
                     task_options=task_options)
 
@@ -187,7 +189,6 @@ def trc_to_unrolled_alignment():
 
 
 @pa_register("subreadset_refarm", "Resolve Trace file from Subreadset, then Refarm to generate a new SubreadSet", "0.1.0",
-             tags=(Tags.DEV, Tags.INTERNAL, "primary-analysis"),
              task_options={})
 def subreadset_refarm():
     # WIP. going to get a test to work and iterate. This might require a custom task to generate the
@@ -199,8 +200,7 @@ def subreadset_refarm():
     return b1
 
 
-@pa_register("subreadset_compare", "Compare Two SubreadSets, the first is assumed to be the 'baseline' ", "0.1.0",
-             tags=(Tags.DEV, Tags.INTERNAL, "primary-analysis"),
+@pa_register("subreadset_compare", "Compare Two SubreadSets, the first is assumed to be the 'baseline' ", "0.1.0", tags=(Tags.RPT, ),
              task_options={})
 def subreadset_compare():
     b1 = [("$entry:sset1", "pbinternal2.tasks.compare_subreadsets_report:0")]

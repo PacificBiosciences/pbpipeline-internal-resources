@@ -106,10 +106,9 @@
     "options": [], 
     "tags": [
         "internal", 
-        "dev", 
         "mapping", 
         "reports", 
-        "primary"
+        "primary-analysis"
     ], 
     "taskOptions": [
         {

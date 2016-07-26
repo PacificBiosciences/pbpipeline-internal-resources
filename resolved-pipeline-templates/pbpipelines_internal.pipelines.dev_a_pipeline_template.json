@@ -57,8 +57,8 @@
     "name": "Custom Example 01", 
     "options": [], 
     "tags": [
-        "hello-world", 
-        "dev"
+        "internal", 
+        "conditions"
     ], 
     "taskOptions": [
         {
@@ -69,5 +69,5 @@
             "optionTypeId": "pbsmrtpipe.option_types.string"
         }
     ], 
-    "version": "0.1.0"
+    "version": "0.2.0"
 }

@@ -214,12 +214,11 @@
     "name": "RS movie Resequencing + Reports", 
     "options": [], 
     "tags": [
-        "mapping", 
-        "dev", 
-        "primary", 
         "consensus", 
         "internal", 
-        "reports"
+        "mapping", 
+        "reports", 
+        "primary-analysis"
     ], 
     "taskOptions": [
         {

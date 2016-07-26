@@ -34,8 +34,7 @@
     "tags": [
         "internal", 
         "primary-analysis", 
-        "dev", 
-        "primary"
+        "reports"
     ], 
     "taskOptions": [], 
     "version": "0.1.0"
