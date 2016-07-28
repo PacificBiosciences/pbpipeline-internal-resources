@@ -54,6 +54,17 @@ def to_bs():
     return b3
 
 
+@registry("internal_eol_qc_stats", "EOL QC resequencing pipeline", "0.1.0", tags=(Tags.INTERNAL,))
+def to_bs():
+    """EOL QC custom resequencing pipeline"""
+
+    b1 = [(Constants.ENTRY_DS_SUBREAD, 'pbinternal2.tasks.eol_qc:0'),
+          (Constants.ENTRY_DS_ALIGN, 'pbinternal2.tasks.eol_qc:1')]
+          #("pbsmrtpipe.pipelines.sa3_ds_resequencing_fat:pbalign.tasks.pbalign:0",
+          # 'pbinternal2.tasks.eol_qc:1')]
+    return b1
+
+
 @registry("internal_cond_dev", "Dev Reseq Cond Report", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
     """Hello World test for Conditions JSON"""

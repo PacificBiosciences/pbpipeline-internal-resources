@@ -1,0 +1,47 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_eol_qc_stats with pbsmrtpipe v0.42.2", 
+    "bindings": [], 
+    "description": "EOL QC custom resequencing pipeline", 
+    "entryPoints": [
+        {
+            "entryId": "eid_alignment", 
+            "fileTypeId": "PacBio.DataSet.AlignmentSet", 
+            "name": "Entry Name: PacBio.DataSet.AlignmentSet", 
+            "tasks": [
+                {
+                    "index": 1, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.eol_qc"
+                }
+            ]
+        }, 
+        {
+            "entryId": "eid_subread", 
+            "fileTypeId": "PacBio.DataSet.SubreadSet", 
+            "name": "Entry Name: PacBio.DataSet.SubreadSet", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.eol_qc"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.internal_eol_qc_stats", 
+    "name": "EOL QC resequencing pipeline", 
+    "options": [], 
+    "tags": [
+        "internal"
+    ], 
+    "taskOptions": [
+        {
+            "default": 32768, 
+            "description": "Option nreads description", 
+            "id": "pbinternal2.task_options.nreads", 
+            "name": "Option nreads", 
+            "optionTypeId": "pbsmrtpipe.option_types.integer"
+        }
+    ], 
+    "version": "0.1.0"
+}
