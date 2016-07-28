@@ -2,7 +2,7 @@
 <pipeline-template>
 
     <!-- Reference a workflow template defined in -->
-    <import-template id="pbpipelines_internal.pipelines.eol_qc_resequencing" />
+    <import-template id="pbpipelines_internal.pipelines.internal_eol_qc_stats" />
 
     <options>
     <!-- workflow level options  -->

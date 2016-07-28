@@ -11,7 +11,7 @@
                 {
                     "index": 1, 
                     "instanceId": 0, 
-                    "taskTypeId": "pbsmrtpipe_internal.tasks.eol_qc"
+                    "taskTypeId": "pbinternal2.tasks.eol_qc"
                 }
             ]
         }, 
@@ -23,7 +23,7 @@
                 {
                     "index": 0, 
                     "instanceId": 0, 
-                    "taskTypeId": "pbsmrtpipe_internal.tasks.eol_qc"
+                    "taskTypeId": "pbinternal2.tasks.eol_qc"
                 }
             ]
         }
@@ -44,7 +44,7 @@
         {
             "default": 32768, 
             "description": "Option nreads description", 
-            "id": "pbsmrtpipe_internal.task_options.nreads", 
+            "id": "pbinternal2.task_options.nreads", 
             "name": "Option nreads", 
             "optionTypeId": "pbsmrtpipe.option_types.integer"
         }

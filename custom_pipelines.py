@@ -58,10 +58,10 @@ def to_bs():
 def to_bs():
     """EOL QC custom resequencing pipeline"""
 
-    b1 = [(Constants.ENTRY_DS_SUBREAD, 'pbsmrtpipe_internal.tasks.eol_qc:0'),
-          (Constants.ENTRY_DS_ALIGN, 'pbsmrtpipe_internal.tasks.eol_qc:1')]
+    b1 = [(Constants.ENTRY_DS_SUBREAD, 'pbinternal2.tasks.eol_qc:0'),
+          (Constants.ENTRY_DS_ALIGN, 'pbinternal2.tasks.eol_qc:1')]
           #("pbsmrtpipe.pipelines.sa3_ds_resequencing_fat:pbalign.tasks.pbalign:0",
-          # 'pbinternal2.tasks.eol_qc_stats:1')]
+          # 'pbinternal2.tasks.eol_qc:1')]
     return b1
 
 

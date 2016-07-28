@@ -6,7 +6,7 @@
     },
     "tool_contract": {
         "_comment": "Created by v0.4.3",
-        "description": "Quick tool eol_qc pbsmrtpipe_internal.tasks.eol_qc",
+        "description": "Quick tool eol_qc pbinternal2.tasks.eol_qc",
         "input_types": [
             {
                 "description": "description for PacBio.DataSet.SubreadSet_0",
@@ -48,11 +48,11 @@
                     "default": 32768,
                     "description": "Option nreads description",
                     "name": "Option nreads",
-                    "option_id": "pbsmrtpipe_internal.task_options.nreads",
+                    "option_id": "pbinternal2.task_options.nreads",
                     "type": "integer"
                 },
                 "properties": {
-                    "pbsmrtpipe_internal.task_options.nreads": {
+                    "pbinternal2.task_options.nreads": {
                         "default": 32768,
                         "description": "Option nreads description",
                         "title": "Option nreads",
@@ -60,15 +60,15 @@
                     }
                 },
                 "required": [
-                    "pbsmrtpipe_internal.task_options.nreads"
+                    "pbinternal2.task_options.nreads"
                 ],
-                "title": "JSON Schema for pbsmrtpipe_internal.task_options.nreads",
+                "title": "JSON Schema for pbinternal2.task_options.nreads",
                 "type": "object"
             }
         ],
         "task_type": "pbsmrtpipe.task_types.standard",
-        "tool_contract_id": "pbsmrtpipe_internal.tasks.eol_qc"
+        "tool_contract_id": "pbinternal2.tasks.eol_qc"
     },
-    "tool_contract_id": "pbsmrtpipe_internal.tasks.eol_qc",
+    "tool_contract_id": "pbinternal2.tasks.eol_qc",
     "version": "0.1.0"
 }
