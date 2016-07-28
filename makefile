@@ -14,6 +14,7 @@ show-pipelines:
 
 
 emit-tool-contracts:
+	# this is missing mh_toy.py
 	python -m pbinternal2.analysis_tools emit-tool-contracts -o tool-contracts
 	python -m pbinternal2.pa_tasks emit-tool-contracts -o tool-contracts
 
@@ -40,3 +41,4 @@ clean:
 	find . -name "*.pyc" | xargs rm -rf
 	find . -name "job_output" | xargs rm -rf
 	find . -name "0.std*" -delete
+
