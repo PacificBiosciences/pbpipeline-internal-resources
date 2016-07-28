@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.4.1",
+        "_comment": "Created by v0.4.5",
         "description": "Quick tool basecaller_from_subreadset pbinternal2.tasks.basecaller_from_subreadset",
         "input_types": [
             {
@@ -16,7 +16,7 @@
             }
         ],
         "is_distributed": true,
-        "name": "Tool basecaller_from_subreadset",
+        "name": "SubreadSet/Trace Refarm",
         "nproc": 1,
         "output_types": [
             {

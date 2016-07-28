@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.4.1",
+        "_comment": "Created by v0.4.5",
         "description": "Quick tool compare_subreadsets_report pbinternal2.tasks.compare_subreadsets_report",
         "input_types": [
             {
@@ -22,7 +22,7 @@
             }
         ],
         "is_distributed": true,
-        "name": "Tool compare_subreadsets_report",
+        "name": "SubreadSet Compare",
         "nproc": 1,
         "output_types": [
             {
@@ -39,5 +39,5 @@
         "tool_contract_id": "pbinternal2.tasks.compare_subreadsets_report"
     },
     "tool_contract_id": "pbinternal2.tasks.compare_subreadsets_report",
-    "version": "0.1.0"
+    "version": "0.2.0"
 }
