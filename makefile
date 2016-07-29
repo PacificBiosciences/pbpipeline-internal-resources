@@ -4,10 +4,10 @@ PROJ_DIR := $(abspath $(lastword $(MAKEFILE_LIST)))
 emit-pa-pipelines:
 	python custom_pa_pipelines.py --log-level=INFO resolved-pipeline-templates
 
-emit-internal-pipelines:
+emit-custom-pipelines:
 	python custom_pipelines.py --log-level=INFO resolved-pipeline-templates
 
-emit-pipelines: emit-pa-pipelines emit-internal-pipelines
+emit-pipelines: emit-pa-pipelines emit-custom-pipelines
 
 show-pipelines:
 	pbsmrtpipe show-templates | grep internal
