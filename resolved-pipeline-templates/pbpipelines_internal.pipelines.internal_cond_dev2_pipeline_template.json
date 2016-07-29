@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_dev2 with pbsmrtpipe v0.41.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_dev2 with pbsmrtpipe v0.42.3", 
     "bindings": [], 
     "description": "Dev Test for AlignmentSet Condition Summary", 
     "entryPoints": [
