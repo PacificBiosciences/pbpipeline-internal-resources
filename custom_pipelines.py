@@ -6,6 +6,8 @@ using pipelines to emit a Pipeline XML or ResolvedPipeline Template JSON file
 import logging
 import sys
 
+# This is necessary to reference existing pipelines that are loaded at runtime
+from pbsmrtpipe.loader import load_all_installed_pipelines
 from pbsmrtpipe.core import PipelineRegistry
 from pbsmrtpipe.cli_custom_pipeline import registry_runner_main
 
@@ -23,8 +25,8 @@ class C(object):
 
     TAGS_DEFAULT = (Tags.INTERNAL, TAGS_COND)
 
-
-registry = PipelineRegistry(C.PT_NAMESPACE)
+loaded_pipelines = load_all_installed_pipelines().values()
+registry = PipelineRegistry(C.PT_NAMESPACE, pipelines=loaded_pipelines)
 
 
 def _example_topts():
