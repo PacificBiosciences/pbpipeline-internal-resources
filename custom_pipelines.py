@@ -62,10 +62,14 @@ def to_bs():
 
     # (Constants.ENTRY_DS_ALIGN, 'pbinternal2.tasks.eol_qc:1')]
 
-    b1 = [(Constants.ENTRY_DS_SUBREAD, 'pbinternal2.tasks.eol_qc:0'),
-          ("pbsmrtpipe.pipelines.sa3_ds_resequencing_fat:pbalign.tasks.pbalign:0", 'pbinternal2.tasks.eol_qc:1')]
+    b0 = [(Constants.ENTRY_DS_SUBREAD, 'pbalign.tasks.pbalign:0'),
+          (Constants.ENTRY_DS_REF, 'pbalign.tasks.pbalign:1')]
 
-    return b1
+    b1 = [(Constants.ENTRY_DS_SUBREAD, 'pbinternal2.tasks.eol_qc:0'),
+          ('pbalign.tasks.pbalign:0', 'pbinternal2.tasks.eol_qc:1')]
+          #("pbsmrtpipe.pipelines.sa3_ds_align:pbalign.tasks.pbalign:0", 'pbinternal2.tasks.eol_qc:1')]
+
+    return b0 + b1
 
 
 @registry("internal_cond_dev", "Dev Reseq Cond Report", "0.2.0", tags=C.TAGS_DEFAULT)
