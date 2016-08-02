@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_read_plots with pbsmrtpipe v0.41.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_read_plots with pbsmrtpipe v0.43.0", 
     "bindings": [], 
     "description": "Read Based Metrics Plots", 
     "entryPoints": [
