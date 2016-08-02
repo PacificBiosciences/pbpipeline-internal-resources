@@ -56,7 +56,7 @@ def to_bs():
     return b3
 
 
-@registry("internal_eol_qc_stats", "EOL QC resequencing pipeline", "0.2.0", tags=(Tags.INTERNAL,))
+@registry("internal_eol_qc_stats", "EOL QC resequencing pipeline", "0.2.1", tags=(Tags.INTERNAL,))
 def to_bs():
     """EOL QC custom resequencing pipeline"""
 
