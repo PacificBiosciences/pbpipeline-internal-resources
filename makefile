@@ -1,11 +1,15 @@
 PROJ_DIR := $(abspath $(lastword $(MAKEFILE_LIST)))
+LOG_LEVEL = "INFO"
+#LOG_LEVEL = "DEBUG"
 
 
 emit-pa-pipelines:
-	python custom_pa_pipelines.py --log-level=INFO resolved-pipeline-templates
+	# the pipeline template dir needs to be removed so the "old" pipelines are loaded
+	unset PB_PIPELINE_TEMPLATE_DIR && python custom_pa_pipelines.py --log-level=${LOG_LEVEL} resolved-pipeline-templates
 
 emit-custom-pipelines:
-	python custom_pipelines.py --log-level=INFO resolved-pipeline-templates
+	# the pipeline template dir needs to be removed so the "old" pipelines are loaded
+	unset PB_PIPELINE_TEMPLATE_DIR && python custom_pipelines.py --log-level=${LOG_LEVEL} resolved-pipeline-templates
 
 emit-pipelines: emit-pa-pipelines emit-custom-pipelines
 
