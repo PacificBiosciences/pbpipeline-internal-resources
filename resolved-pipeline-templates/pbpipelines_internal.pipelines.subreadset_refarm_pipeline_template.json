@@ -1,9 +1,21 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.subreadset_refarm with pbsmrtpipe v0.41.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.subreadset_refarm with pbsmrtpipe v0.43.0", 
     "bindings": [
         {
             "in": {
+                "index": 1, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.compare_subreadsets_report"
+            }, 
+            "out": {
                 "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.baz2subreadset"
+            }
+        }, 
+        {
+            "in": {
+                "index": 1, 
                 "instanceId": 0, 
                 "taskTypeId": "pbinternal2.tasks.baz2subreadset"
             }, 
@@ -11,18 +23,6 @@
                 "index": 0, 
                 "instanceId": 0, 
                 "taskTypeId": "pbinternal2.tasks.basecaller_from_subreadset"
-            }
-        }, 
-        {
-            "in": {
-                "index": 0, 
-                "instanceId": 1, 
-                "taskTypeId": "pbinternal2.tasks.compare_subreadsets_report"
-            }, 
-            "out": {
-                "index": 0, 
-                "instanceId": 0, 
-                "taskTypeId": "pbinternal2.tasks.baz2subreadset"
             }
         }
     ], 

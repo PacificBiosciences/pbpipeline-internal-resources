@@ -198,7 +198,7 @@ def subreadset_refarm():
     b1 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.basecaller_from_subreadset:0")]
     # Generate bam and SubreadSet
     b2 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.baz2subreadset:0")]
-    b3 = [("pbinternal2.tasks.basecaller_from_subreadset:0", "pbinternal2.tasks.baz2subreadset:0")]
+    b3 = [("pbinternal2.tasks.basecaller_from_subreadset:0", "pbinternal2.tasks.baz2subreadset:1")]
 
     # Compare original and new "refarmed" SubreadSet
     b4 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.compare_subreadsets_report:0")]
