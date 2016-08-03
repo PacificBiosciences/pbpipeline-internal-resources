@@ -188,16 +188,23 @@ def trc_to_unrolled_alignment():
     return b1 + b2 + b3 + b4
 
 
-@pa_register("subreadset_refarm", "Resolve Trace file from Subreadset, then Refarm to generate a new SubreadSet", "0.1.0",
+@pa_register("subreadset_refarm", "Resolve Trace file from Subreadset, Run PA console-app+baz2bam to generate a new SubreadSet", "0.2.0",
              task_options={})
 def subreadset_refarm():
-    # WIP. going to get a test to work and iterate. This might require a custom task to generate the
-    # refarmed subreadset from the baz file
-    # returns a baz file
+    """Resolve the Trace file from Input SubreadSet, then run the PrimaryAnalysis console-app
+    to generate Baz file, then convert to Bam and create a new SubreadSet.
+    Then run the comparison tool to compare the original SubreadSet and new "refarmed" SubreadSet.
+    """
     b1 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.basecaller_from_subreadset:0")]
-    # b2 = _core_baz2bam("pbinternal2.tasks.basecaller_from_subreadset:0")
-    # this still needs to call baz2bam and generate a SubreadSet
-    return b1
+    # Generate bam and SubreadSet
+    b2 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.baz2subreadset:0")]
+    b3 = [("pbinternal2.tasks.basecaller_from_subreadset:0", "pbinternal2.tasks.baz2subreadset:0")]
+
+    # Compare original and new "refarmed" SubreadSet
+    b4 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.compare_subreadsets_report:0")]
+    b5 = [("pbinternal2.tasks.baz2subreadset:0", "pbinternal2.tasks.compare_subreadsets_report:1")]
+
+    return b1 + b2 + b3 + b4 + b5
 
 
 @pa_register("subreadset_compare", "Compare Two SubreadSets, the first is assumed to be the 'baseline' ", "0.1.0", tags=(Tags.RPT, ),
