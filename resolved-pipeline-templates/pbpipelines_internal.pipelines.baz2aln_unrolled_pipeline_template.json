@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.baz2aln_unrolled with pbsmrtpipe v0.41.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.baz2aln_unrolled with pbsmrtpipe v0.43.0", 
     "bindings": [
         {
             "in": {

@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.baz2bam with pbsmrtpipe v0.41.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.baz2bam with pbsmrtpipe v0.43.0", 
     "bindings": [], 
     "description": "\n    Convert basecalls in .baz format to a SubreadSet.\n    ", 
     "entryPoints": [

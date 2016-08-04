@@ -1,7 +1,32 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.subreadset_refarm with pbsmrtpipe v0.41.0", 
-    "bindings": [], 
-    "description": "Pipeline pbpipelines_internal.pipelines.subreadset_refarm description", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.subreadset_refarm with pbsmrtpipe v0.43.0", 
+    "bindings": [
+        {
+            "in": {
+                "index": 1, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.compare_subreadsets_report"
+            }, 
+            "out": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.baz2subreadset"
+            }
+        }, 
+        {
+            "in": {
+                "index": 1, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.baz2subreadset"
+            }, 
+            "out": {
+                "index": 0, 
+                "instanceId": 0, 
+                "taskTypeId": "pbinternal2.tasks.basecaller_from_subreadset"
+            }
+        }
+    ], 
+    "description": "Resolve the Trace file from Input SubreadSet, then run the PrimaryAnalysis console-app\n    to generate Baz file, then convert to Bam and create a new SubreadSet.\n    Then run the comparison tool to compare the original SubreadSet and new \"refarmed\" SubreadSet.\n    ", 
     "entryPoints": [
         {
             "entryId": "eid_subread", 
@@ -11,13 +36,23 @@
                 {
                     "index": 0, 
                     "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.baz2subreadset"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
                     "taskTypeId": "pbinternal2.tasks.basecaller_from_subreadset"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.compare_subreadsets_report"
                 }
             ]
         }
     ], 
     "id": "pbpipelines_internal.pipelines.subreadset_refarm", 
-    "name": "Resolve Trace file from Subreadset, then Refarm to generate a new SubreadSet", 
+    "name": "Resolve Trace file from Subreadset, Run PA console-app+baz2bam to generate a new SubreadSet", 
     "options": [], 
     "tags": [
         "internal", 
@@ -39,5 +74,5 @@
             "optionTypeId": "pbsmrtpipe.option_types.string"
         }
     ], 
-    "version": "0.1.0"
+    "version": "0.2.0"
 }
