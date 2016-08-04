@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.baz2aln with pbsmrtpipe v0.41.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.baz2aln with pbsmrtpipe v0.43.0", 
     "bindings": [
         {
             "in": {
@@ -39,8 +39,8 @@
         }, 
         {
             "in": {
-                "index": 0, 
-                "instanceId": 1, 
+                "index": 1, 
+                "instanceId": 0, 
                 "taskTypeId": "genomic_consensus.tasks.summarize_consensus"
             }, 
             "out": {
@@ -75,8 +75,8 @@
         }, 
         {
             "in": {
-                "index": 0, 
-                "instanceId": 1, 
+                "index": 1, 
+                "instanceId": 0, 
                 "taskTypeId": "pbreports.tasks.coverage_report"
             }, 
             "out": {
@@ -99,8 +99,8 @@
         }, 
         {
             "in": {
-                "index": 0, 
-                "instanceId": 2, 
+                "index": 2, 
+                "instanceId": 0, 
                 "taskTypeId": "pbreports.tasks.variants_report"
             }, 
             "out": {
@@ -111,8 +111,8 @@
         }, 
         {
             "in": {
-                "index": 0, 
-                "instanceId": 1, 
+                "index": 1, 
+                "instanceId": 0, 
                 "taskTypeId": "pbreports.tasks.variants_report"
             }, 
             "out": {
@@ -399,7 +399,7 @@
             "optionTypeId": "pbsmrtpipe.option_types.integer"
         }, 
         {
-            "default": 1000000, 
+            "default": 100000, 
             "description": "Upper limit for genomic region size (ignored if region_size is set explicitly)", 
             "id": "pbreports.task_options.max_region_size", 
             "name": "Maximum region size", 
