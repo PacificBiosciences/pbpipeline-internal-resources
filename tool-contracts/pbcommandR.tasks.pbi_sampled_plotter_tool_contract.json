@@ -1,0 +1,36 @@
+{
+  "version": "0.3.6",
+  "driver": {
+    "serialization": "json",
+    "exe": "PbiSampledPlots.R run-rtc "
+  },
+  "tool_contract_id": "pbcommandR.tasks.pbi_sampled_plotter",
+  "tool_contract": {
+    "task_type": "pbsmrtpipe.task_types.standard",
+    "resource_types": [],
+    "description": "Tool Contract from  pbcommandR.tasks.pbi_sampled_plotter",
+    "name": "Task Name  pbcommandR.tasks.pbi_sampled_plotter",
+    "nproc": 3,
+    "is_distributed": true,
+    "schema_options": [],
+    "tool_contract_id": "pbcommandR.tasks.pbi_sampled_plotter",
+    "input_types": [
+      {
+        "file_type_id": "PacBio.FileTypes.COND_RESEQ",
+        "id": "id_0_cond_reseq",
+        "title": "Display name  PacBio.FileTypes.COND_RESEQ",
+        "description": "File type  PacBio.FileTypes.COND_RESEQ"
+      }
+    ],
+    "output_types": [
+      {
+        "file_type_id": "PacBio.FileTypes.JsonReport",
+        "id": "id_0_jsonreport",
+        "title": "Display name  PacBio.FileTypes.JsonReport",
+        "description": "File type  PacBio.FileTypes.JsonReport",
+        "default_name": "file.report"
+      }
+    ],
+    "comment": "Created from pbcommandR version  0.3.6"
+  }
+}
