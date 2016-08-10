@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.4.3",
+        "_comment": "Created by v0.4.5",
         "description": "Quick tool eol_qc pbinternal2.tasks.eol_qc",
         "input_types": [
             {
@@ -26,18 +26,18 @@
         "nproc": 1,
         "output_types": [
             {
-                "default_name": "file",
-                "description": "description for <FileType id=PacBio.FileTypes.csv name=file >",
+                "default_name": "file_per_zmw",
+                "description": "Per Zmw Statistics",
                 "file_type_id": "PacBio.FileTypes.csv",
-                "id": "Label PacBio.FileTypes.csv_0",
-                "title": "<FileType id=PacBio.FileTypes.csv name=file >"
+                "id": "csv_0",
+                "title": "Per Zmw Stats "
             },
             {
-                "default_name": "file",
-                "description": "description for <FileType id=PacBio.FileTypes.csv name=file >",
+                "default_name": "file_per_movie",
+                "description": "Per Movie Statistics",
                 "file_type_id": "PacBio.FileTypes.csv",
-                "id": "Label PacBio.FileTypes.csv_1",
-                "title": "<FileType id=PacBio.FileTypes.csv name=file >"
+                "id": "csv_1",
+                "title": "Per Movie Stats"
             }
         ],
         "resource_types": [],
@@ -70,5 +70,5 @@
         "tool_contract_id": "pbinternal2.tasks.eol_qc"
     },
     "tool_contract_id": "pbinternal2.tasks.eol_qc",
-    "version": "0.1.0"
+    "version": "0.1.1"
 }
