@@ -70,5 +70,5 @@
         "tool_contract_id": "pbinternal2.tasks.eol_qc"
     },
     "tool_contract_id": "pbinternal2.tasks.eol_qc",
-    "version": "0.1.0"
+    "version": "0.1.1"
 }
