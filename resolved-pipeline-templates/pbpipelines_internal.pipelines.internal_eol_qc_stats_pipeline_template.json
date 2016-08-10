@@ -114,9 +114,9 @@
         }, 
         {
             "default": 70.0, 
-            "description": "Minimum required alignment accuracy (percent)", 
+            "description": "Minimum required alignment concordance", 
             "id": "pbalign.task_options.min_accuracy", 
-            "name": "Min. accuracy", 
+            "name": "Min. concordance", 
             "optionTypeId": "pbsmrtpipe.option_types.float"
         }, 
         {
