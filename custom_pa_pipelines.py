@@ -158,15 +158,6 @@ def bax_to_unrolled_alignment():
     return b1 + b2
 
 
-@pa_register("bam2aln_unrolled", "Unrolled alignment from SubreadSet", "0.1.0",
-             tags=(Tags.MAP, Tags.RPT),
-             task_options={})
-def bam_to_unrolled_alignment():
-    b1 = _core_bam2bam(Constants.ENTRY_DS_SUBREAD)
-    b2 = _core_unrolled_alignment("pbinternal2.tasks.bam2bam:0")
-    return b1 + b2
-
-
 @pa_register("baz2aln_unrolled", "Unrolled alignment from .baz", "0.1.0",
              tags=(Tags.MAP, Tags.RPT),
              task_options={})
