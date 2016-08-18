@@ -159,5 +159,11 @@ def to_bs():
     return [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.dev_mh_toy:0")]
 
 
+@registry("train_bench_ccs", "Train and Validate CCS Model", "0.0.1", tags=C.TAGS_DEFAULT)
+def to_bs():
+    return [(Constants.ENTRY_COND_JSON, "pbitg.tasks.train_bench_ccs:0")]
+
+
+
 if __name__ == '__main__':
     sys.exit(registry_runner_main(registry)(argv=sys.argv))
