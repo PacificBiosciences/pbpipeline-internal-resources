@@ -1,0 +1,28 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.train_bench_ccs with pbsmrtpipe v0.43.0", 
+    "bindings": [], 
+    "description": "Pipeline pbpipelines_internal.pipelines.train_bench_ccs description", 
+    "entryPoints": [
+        {
+            "entryId": "cond_json", 
+            "fileTypeId": "PacBio.FileTypes.COND_RESEQ", 
+            "name": "Entry Name: PacBio.FileTypes.COND_RESEQ", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbitg.tasks.train_bench_ccs"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.train_bench_ccs", 
+    "name": "Train and Validate CCS Model", 
+    "options": [], 
+    "tags": [
+        "internal", 
+        "conditions"
+    ], 
+    "taskOptions": [], 
+    "version": "0.0.1"
+}
