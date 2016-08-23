@@ -5,3 +5,6 @@ export PB_TOOL_CONTRACT_DIR=${PROJ_DIR}/tool-contracts
 # View Rules
 export PB_RULES_REPORT_VIEW_DIR=${PROJ_DIR}/rules-report-view
 export PB_RULES_PIPELINE_VIEW_DIR=${PROJ_DIR}/rules-pipeline-template-view
+
+# Requires pbsmrtpipe >= 0.43.2
+export PB_CHUNK_OPERATOR_DIR=${PROJ_DIR}/chunk-operators
