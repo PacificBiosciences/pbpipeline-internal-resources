@@ -1,0 +1,40 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_const_arrow with pbsmrtpipe v0.43.0", 
+    "bindings": [], 
+    "description": "Per ZMW Constant Rate Arrow", 
+    "entryPoints": [
+        {
+            "entryId": "eid_alignment", 
+            "fileTypeId": "PacBio.DataSet.AlignmentSet", 
+            "name": "Entry Name: PacBio.DataSet.AlignmentSet", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.constant_arrow"
+                }
+            ]
+        }, 
+        {
+            "entryId": "eid_ref_dataset", 
+            "fileTypeId": "PacBio.DataSet.ReferenceSet", 
+            "name": "Entry Name: PacBio.DataSet.ReferenceSet", 
+            "tasks": [
+                {
+                    "index": 1, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.constant_arrow"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.internal_cond_const_arrow", 
+    "name": "Fit Constant Rate HMM Model", 
+    "options": [], 
+    "tags": [
+        "internal", 
+        "conditions"
+    ], 
+    "taskOptions": [], 
+    "version": "0.2.0"
+}
