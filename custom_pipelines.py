@@ -122,6 +122,15 @@ def to_bs():
 
     return b1 + b2
 
+@registry("internal_cond_const_arrow", "Fit Constant Rate HMM Model", "0.2.0", tags=C.TAGS_DEFAULT)
+def to_bs():
+    """Per ZMW Constant Rate Arrow"""
+    b = [(Constants.ENTRY_DS_ALIGN, "pbcommandR.tasks.constant_arrow:0"),
+          (Constants.ENTRY_DS_REF, "pbcommandR.tasks.constant_arrow:1")]
+
+
+    return b
+
 
 @registry("internal_cond_read_plots", "Internal Condition Read Based Plots", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
