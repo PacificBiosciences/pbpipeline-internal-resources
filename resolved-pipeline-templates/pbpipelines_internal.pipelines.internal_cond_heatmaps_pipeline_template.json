@@ -1,0 +1,33 @@
+{
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_heatmaps with pbsmrtpipe v0.43.0", 
+    "bindings": [], 
+    "description": "Heatmaps from various things", 
+    "entryPoints": [
+        {
+            "entryId": "cond_json", 
+            "fileTypeId": "PacBio.FileTypes.COND_RESEQ", 
+            "name": "Entry Name: PacBio.FileTypes.COND_RESEQ", 
+            "tasks": [
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.cond_to_report"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.heatmap_maker"
+                }
+            ]
+        }
+    ], 
+    "id": "pbpipelines_internal.pipelines.internal_cond_heatmaps", 
+    "name": "Internal Condition HeatMaps", 
+    "options": [], 
+    "tags": [
+        "internal", 
+        "conditions"
+    ], 
+    "taskOptions": [], 
+    "version": "0.2.0"
+}

@@ -151,6 +151,15 @@ def to_bs():
 
     return b1 + b2
 
+@registry("internal_cond_heatmaps", "Internal Condition HeatMaps", "0.2.0", tags=C.TAGS_DEFAULT)
+def to_bs():
+    """Heatmaps from various things"""
+    b1 = [(Constants.ENTRY_COND_JSON, "pbinternal2.tasks.cond_to_report:0")]
+
+    b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.heatmap_maker:0")]
+
+    return b1 + b2
+
 
 @registry("internal_cond_r_plots", "Resequencing Comparison Plots", "0.2.0", tags=C.TAGS_DEFAULT)
 def to_bs():
@@ -159,8 +168,9 @@ def to_bs():
     b2 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.pbiplot_reseq_condition:0")]
     b3 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.readplot_reseq_condition:0")]
     b4 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.pbi_sampled_plotter:0")]
+    b5 = [(Constants.ENTRY_COND_JSON, "pbcommandR.tasks.heatmap_maker:0")]
 
-    return b1 + b2 + b3 + b4
+    return b1 + b2 + b3 + b4 + b5
 
 
 @registry("dev_mh_toy", "Accuracy Comparison Plots (KN)", "0.1.0", tags=C.TAGS_DEFAULT)
