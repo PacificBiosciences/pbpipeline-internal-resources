@@ -21,6 +21,11 @@
                 {
                     "index": 0, 
                     "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.heatmap_maker"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
                     "taskTypeId": "pbcommandR.tasks.pbiplot_reseq_condition"
                 }, 
                 {
