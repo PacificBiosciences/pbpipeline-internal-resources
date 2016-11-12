@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_r_plots with pbsmrtpipe v0.43.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.internal_cond_r_plots with pbsmrtpipe v0.44.4", 
     "bindings": [], 
     "description": "A pipeline that runs all the R metric makers", 
     "entryPoints": [
@@ -11,17 +11,17 @@
                 {
                     "index": 0, 
                     "instanceId": 0, 
-                    "taskTypeId": "pbinternal2.tasks.cond_to_report"
-                }, 
-                {
-                    "index": 0, 
-                    "instanceId": 0, 
                     "taskTypeId": "pbcommandR.tasks.pbi_sampled_plotter"
                 }, 
                 {
                     "index": 0, 
                     "instanceId": 0, 
-                    "taskTypeId": "pbcommandR.tasks.heatmap_maker"
+                    "taskTypeId": "pbcommandR.tasks.readplot_reseq_condition"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbinternal2.tasks.cond_to_report"
                 }, 
                 {
                     "index": 0, 
@@ -31,7 +31,12 @@
                 {
                     "index": 0, 
                     "instanceId": 0, 
-                    "taskTypeId": "pbcommandR.tasks.readplot_reseq_condition"
+                    "taskTypeId": "pbcommandR.tasks.heatmap_maker"
+                }, 
+                {
+                    "index": 0, 
+                    "instanceId": 0, 
+                    "taskTypeId": "pbcommandR.tasks.lib_diagnostic_plotter"
                 }
             ]
         }
