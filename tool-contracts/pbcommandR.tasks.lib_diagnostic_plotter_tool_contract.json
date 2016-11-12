@@ -2,18 +2,18 @@
   "version": "0.3.6",
   "driver": {
     "serialization": "json",
-    "exe": "LibDiagnosticsPlots.R run-rtc "
+    "exe": "LibDiagnosticPlots.R run-rtc "
   },
-  "tool_contract_id": "pbcommandR.tasks.libdiagnosticsplots_reseq_condition",
+  "tool_contract_id": "pbcommandR.tasks.lib_diagnostic_plotter",
   "tool_contract": {
     "task_type": "pbsmrtpipe.task_types.standard",
     "resource_types": [],
-    "description": "Tool Contract from  pbcommandR.tasks.libdiagnosticsplots_reseq_condition",
-    "name": "Task Name  pbcommandR.tasks.libdiagnosticsplots_reseq_condition",
-    "nproc": 1,
+    "description": "Tool Contract from  pbcommandR.tasks.lib_diagnostic_plotter",
+    "name": "Task Name  pbcommandR.tasks.lib_diagnostic_plotter",
+    "nproc": 3,
     "is_distributed": true,
     "schema_options": [],
-    "tool_contract_id": "pbcommandR.tasks.libdiagnosticsplots_reseq_condition",
+    "tool_contract_id": "pbcommandR.tasks.lib_diagnostic_plotter",
     "input_types": [
       {
         "file_type_id": "PacBio.FileTypes.COND_RESEQ",
