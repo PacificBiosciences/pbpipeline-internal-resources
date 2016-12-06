@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.subreadset_refarm with pbsmrtpipe v0.43.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.subreadset_refarm with pbsmrtpipe v0.44.4", 
     "bindings": [
         {
             "in": {
@@ -67,10 +67,38 @@
             "optionTypeId": "pbsmrtpipe.option_types.string"
         }, 
         {
+            "default": "basecaller/4.0.0", 
+            "description": "Option basecaller_module description", 
+            "id": "pbinternal2.task_options.basecaller_module", 
+            "name": "Option basecaller_module", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
             "default": "--internal --method=TA_DME_FFHmm_P2B", 
             "description": "Option basecaller_options description", 
             "id": "pbinternal2.task_options.basecaller_options", 
             "name": "Option basecaller_options", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
+            "default": "baz2bam", 
+            "description": "Option baz2bam_exe description", 
+            "id": "pbinternal2.task_options.baz2bam_exe", 
+            "name": "Option baz2bam_exe", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
+            "default": 50, 
+            "description": "Option min_subread_length description", 
+            "id": "pbinternal2.task_options.min_subread_length", 
+            "name": "Option min_subread_length", 
+            "optionTypeId": "pbsmrtpipe.option_types.integer"
+        }, 
+        {
+            "default": "basecaller/4.0.0", 
+            "description": "Option ppa_module description", 
+            "id": "pbinternal2.task_options.ppa_module", 
+            "name": "Option ppa_module", 
             "optionTypeId": "pbsmrtpipe.option_types.string"
         }
     ], 

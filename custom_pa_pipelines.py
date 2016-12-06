@@ -179,6 +179,25 @@ def trc_to_unrolled_alignment():
     return b1 + b2 + b3 + b4
 
 
+@pa_register("subreadset_refarm_loading",
+             "Resolve trace file from Subreadset, run PA, PPA, reports", "0.1.0",
+             task_options={})
+def subreadset_refarm_fat():
+    """Resolve the Trace file from Input SubreadSet, then run the PrimaryAnalysis console-app
+    to generate Baz file, then convert to Bam and create a new SubreadSet.
+    Then run reports.
+    """
+    b1 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.basecaller_from_subreadset:0")]
+    # Generate bam and SubreadSet
+    b2 = [(Constants.ENTRY_DS_SUBREAD, "pbinternal2.tasks.baz2subreadset:0")]
+    b3 = [("pbinternal2.tasks.basecaller_from_subreadset:0", "pbinternal2.tasks.baz2subreadset:1")]
+
+    # Compare original and new "refarmed" SubreadSet
+    b4 = [("pbinternal2.tasks.baz2subreadset:1", "pbinternal2.tasks.loading_vs_poisson_report:0")]
+
+    return b1 + b2 + b3 + b4
+
+
 @pa_register("subreadset_refarm", "Resolve Trace file from Subreadset, Run PA console-app+baz2bam to generate a new SubreadSet", "0.2.0",
              task_options={})
 def subreadset_refarm():

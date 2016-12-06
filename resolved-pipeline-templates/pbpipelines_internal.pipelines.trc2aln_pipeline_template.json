@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.trc2aln with pbsmrtpipe v0.43.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.trc2aln with pbsmrtpipe v0.44.4", 
     "bindings": [
         {
             "in": {
@@ -349,9 +349,9 @@
         }, 
         {
             "default": 70.0, 
-            "description": "Minimum required alignment accuracy (percent)", 
+            "description": "Minimum required alignment concordance", 
             "id": "pbalign.task_options.min_accuracy", 
-            "name": "Min. accuracy", 
+            "name": "Min. concordance", 
             "optionTypeId": "pbsmrtpipe.option_types.float"
         }, 
         {
@@ -376,6 +376,13 @@
             "optionTypeId": "pbsmrtpipe.option_types.string"
         }, 
         {
+            "default": "basecaller/4.0.0", 
+            "description": "Option basecaller_module description", 
+            "id": "pbinternal2.task_options.basecaller_module", 
+            "name": "Option basecaller_module", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
+        }, 
+        {
             "default": "--internal --method=TA_DME_FFHmm_P2B", 
             "description": "Option basecaller_options description", 
             "id": "pbinternal2.task_options.basecaller_options", 
@@ -395,6 +402,13 @@
             "id": "pbinternal2.task_options.min_subread_length", 
             "name": "Option min_subread_length", 
             "optionTypeId": "pbsmrtpipe.option_types.integer"
+        }, 
+        {
+            "default": "basecaller/4.0.0", 
+            "description": "Option ppa_module description", 
+            "id": "pbinternal2.task_options.ppa_module", 
+            "name": "Option ppa_module", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
         }, 
         {
             "default": 10000, 

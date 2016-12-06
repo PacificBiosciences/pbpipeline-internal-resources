@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.4.5",
+        "_comment": "Created by v0.4.14",
         "description": "Quick tool basecaller pbinternal2.tasks.basecaller",
         "input_types": [
             {
@@ -29,6 +29,29 @@
         ],
         "resource_types": [],
         "schema_options": [
+            {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "pb_option": {
+                    "default": "basecaller/4.0.0",
+                    "description": "Option basecaller_module description",
+                    "name": "Option basecaller_module",
+                    "option_id": "pbinternal2.task_options.basecaller_module",
+                    "type": "string"
+                },
+                "properties": {
+                    "pbinternal2.task_options.basecaller_module": {
+                        "default": "basecaller/4.0.0",
+                        "description": "Option basecaller_module description",
+                        "title": "Option basecaller_module",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "pbinternal2.task_options.basecaller_module"
+                ],
+                "title": "JSON Schema for pbinternal2.task_options.basecaller_module",
+                "type": "object"
+            },
             {
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "pb_option": {

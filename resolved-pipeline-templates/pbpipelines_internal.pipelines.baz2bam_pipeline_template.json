@@ -1,5 +1,5 @@
 {
-    "_comment": "Created pipeline pbpipelines_internal.pipelines.baz2bam with pbsmrtpipe v0.43.0", 
+    "_comment": "Created pipeline pbpipelines_internal.pipelines.baz2bam with pbsmrtpipe v0.44.4", 
     "bindings": [], 
     "description": "\n    Convert basecalls in .baz format to a SubreadSet.\n    ", 
     "entryPoints": [
@@ -62,6 +62,13 @@
             "id": "pbinternal2.task_options.min_subread_length", 
             "name": "Option min_subread_length", 
             "optionTypeId": "pbsmrtpipe.option_types.integer"
+        }, 
+        {
+            "default": "basecaller/4.0.0", 
+            "description": "Option ppa_module description", 
+            "id": "pbinternal2.task_options.ppa_module", 
+            "name": "Option ppa_module", 
+            "optionTypeId": "pbsmrtpipe.option_types.string"
         }
     ], 
     "version": "0.1.0"
