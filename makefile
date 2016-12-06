@@ -21,6 +21,7 @@ emit-tool-contracts:
 	# this is missing mh_toy.py
 	python -m pbinternal2.analysis_tools emit-tool-contracts -o tool-contracts
 	python -m pbinternal2.pa_tasks emit-tool-contracts -o tool-contracts
+	python -m pbinternal2.tasks.loading emit-tool-contracts -o tool-contracts
 
 test-dev:
 	cd testkit-data && pbtestkit-multirunner --debug --nworkers 8 testkit.fofn

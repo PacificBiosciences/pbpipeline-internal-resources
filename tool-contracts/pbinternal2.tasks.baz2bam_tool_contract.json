@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.4.5",
+        "_comment": "Created by v0.4.14",
         "description": "Quick tool baz2bam pbinternal2.tasks.baz2bam",
         "input_types": [
             {
@@ -62,6 +62,29 @@
                     "pbinternal2.task_options.min_subread_length"
                 ],
                 "title": "JSON Schema for pbinternal2.task_options.min_subread_length",
+                "type": "object"
+            },
+            {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "pb_option": {
+                    "default": "basecaller/4.0.0",
+                    "description": "Option ppa_module description",
+                    "name": "Option ppa_module",
+                    "option_id": "pbinternal2.task_options.ppa_module",
+                    "type": "string"
+                },
+                "properties": {
+                    "pbinternal2.task_options.ppa_module": {
+                        "default": "basecaller/4.0.0",
+                        "description": "Option ppa_module description",
+                        "title": "Option ppa_module",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "pbinternal2.task_options.ppa_module"
+                ],
+                "title": "JSON Schema for pbinternal2.task_options.ppa_module",
                 "type": "object"
             },
             {
