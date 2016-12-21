@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AlignmentSet CreatedAt="2016-12-04T18:12:21" MetaType="PacBio.DataSet.AlignmentSet" Name="pacbio_dataset_alignmentset-161205_021221863" Tags="" TimeStampedName="pacbio_dataset_alignmentset-161205_021221863" UniqueId="97313013-2a9d-c8f4-cd0d-00a5893b59c2" Version="3.0.1" xmlns="http://pacificbiosciences.com/PacBioDatasets.xsd" xmlns:pbbase="http://pacificbiosciences.com/PacBioBaseDataModel.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pacificbiosciences.com/PacBioDataModel.xsd">
+	<pbbase:ExternalResources>
+		<pbbase:ExternalResource MetaType="PacBio.AlignmentFile.AlignmentBamFile" ResourceId="test.aligned.bam" TimeStampedName="pacbio_alignmentfile_alignmentbamfile-161205_021221862" UniqueId="50d4e772-65fb-4dcd-9993-da4100b374c0">
+			<pbbase:FileIndices>
+				<pbbase:FileIndex MetaType="PacBio.Index.PacBioIndex" ResourceId="test.aligned.bam.pbi" TimeStampedName="pacbio_index_pacbioindex-161205_021221862" UniqueId="90333c7c-6dd4-4acc-8922-58b0810d5042"/>
+				<pbbase:FileIndex MetaType="PacBio.Index.BamIndex" ResourceId="test.aligned.bam.bai" TimeStampedName="pacbio_index_bamindex-161205_021221862" UniqueId="c17de27a-159d-41a3-9836-083856e63b65"/>
+			</pbbase:FileIndices>
+		</pbbase:ExternalResource>
+	</pbbase:ExternalResources>
+	<DataSetMetadata>
+		<TotalLength>9377</TotalLength>
+		<NumRecords>10</NumRecords>
+	</DataSetMetadata>
+</AlignmentSet>
